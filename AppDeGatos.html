@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+      <title>Gatos Siames Red Point</title>
+  </head><!--Contiene cosas que no vemos y la meta data-->
+    <body>
+      <h1>Siames Red Point</h1>
+      <main> 
+        <hr> <!-- Hr crea una linea horizontal-->
+        <a href="#comp">Comportamiento</a><!--#id nos permite unir el enlace al identificador-->
+        <a href="#sal">Salud</a>
+        <a href="#imag">Imagenes</a>
+        <a href="#list">Listas</a>
+        
+        <h2 id="comp">Comportamiento</h2> <!--Id nos permite poner un identificador. -->
+        <p lang="es"> Suelen ser felinos tranquilos, sociables, mimosos y protectores. En especial son platicadores, muy expresivos y les gusta jugar.
+        </p>
+        
+        <h2 id="sal">Salud</h2>
+        <p lang="es"> En general es buena, pero puede afectarse por cualquier enfermedad gatuna. Con cuidados básicos se mantendra más sano. 
+        </p>
+
+        <p lang="es"> Pueden llegar a presentar estrabismo (ojos bizcos), debido a que el padecimiento se hereda de los siames. Esto no le impide ver con normalidad por lo que no hay que preocuparse.
+        </p>
+
+        <h2 id="list">Listas de gatos</h2>
+
+        <div>
+          <p>Cosas que <em>aman</em> los gatos:</p> <!--Em pone letra en cursiva-->
+          <ul>
+            <li>Catnip</li>
+            <li>Juguetes</li>
+            <li>Bolsas de plastico</li>
+            <li>Cajas</li>
+            <li>Sobres de comida</li>
+          </ul><!--Permite crear una lista no ordenada, la etiqueta li permite poner viñetas a cada elemento-->
+
+          <p>Cosas que <strong>odian</strong> los gatos:</p><!--Strong pone letra en negritas-->
+          <ol>
+            <li>Bañarse</li>
+            <li><s>Truenos</s></li> <!--Con s se tacha el texto-->
+            <li>Espergina</li>
+        
+          </ol><!--Permite crear una lista ordenada, la etiqueta li permite poner numeros ordenados a cada elemento-->
+        </div> <!--Funciona como un contenedor que se pueden poner elementos ordenados dentro de este.-->
+
+        <h3 id="imag">Imagenes de gatos:</h3>
+        <p>Haz click aquí para ver más <a href="https://www.notigatos.es/siames-red-point/" target="_blank" rel="noopener norferrer"> imagenes de gato</a></p>
+        <!-- a (anchor) es un enlace que se puede agregar a la página web. Href representa el destino del enlace, para hacer enlaces muertos se pone un #, solo es para diseño pero no cargará nada. Target nos permite especificar donde queremos abrir nuestro enlace.
+        _blank es una pestaña nueva.
+        El atributo rel="noopener norferrer" evita un ataque que se llama Tabnabbing, se remplaza una pestaña por otra que pide datos ilegales.
+      -->
+      <!--Agrega un parrafo de texto, para ver todo el texto usar alt-z-->
+
+        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.notigatos.es%2Fsiames-red-point%2F&psig=AOvVaw0OT7-cE2NsNARGj8foHtAc&ust=1654558969087000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCPCQ79i-l_gCFQAAAAAdAAAAABAN" alt="Un gato raza red point siamese"> 
+        <!--Con la etiqueta img agregamos una imagen, src es source (fuente) de donde se encuentra la imagen, con alt nos da una descripción -->
+        <a href="https://www.notigatos.es/siames-red-point/" target="_blank" rel="noopener norferrer"> <img src="imagenes/Gatitobb.jpg" alt="otro gatito bebe de la misma raza" ></a>
+        <!--Encerrado una imagen con la etiqueta a hara que la imagen se vuelva un enlace-->
+        <img src="imagenes/gato.jpg" alt="Gato adulto misma raza">
+        <img src="imagenes/espergina.jpg" alt="Gato siames llamado Espergina">
+        <!--En la "Red de Desarrolladores de Mozilla" MDN se puede obtener documentación-->
+        <!-- A la hora de comentar se puede usar ctrl-/-- para hacer una linea en un comentario.-->
+        
+        <form action="/enviar-respuesta">
+          <label for="interior"><input id="interior" type="radio" name="interior-exterior" value="interior" checked>Interior</label>
+          <br> <!--Representa salto de linea-->
+          <label for="exterior"><input id="exterior" type="radio" name="interior-exterior" value="exterior">Exterior</label><br>
+          <!--Radio es un tipo de formulario de llenar una bolita para deicidir la opcion. Con label encerrando la opcion, permite que al elegir el texto tambien se elija la opción y se rellene el circulito. Con for se relaciona a la etiqueta con el id. Para crear grupos de botones de radio se usa name y se pone en todas las opciones de ese grupo, esto evita que se seleccionen ambas al mismo tiempo.-->
+          
+          <input type="text" placeholder="URL de la foto de tu gato" required> <br><!--Input permite ingresar texto en un campo. placeholder es un atributo que aparece dentro del campo de texto pero se borra cuando el usuario empieza a escribir.Required evita que se envie vacio el campo de texto y pide obligatoriamente que se llene para avanzar.-->
+          <label for="sv"><input type="checkbox" id="sv" name="Vacunas" value="vac" checked>Vacunado</label><br>
+          <label for="nv"><input type="checkbox" id="nv" name="Vacunas" value="novac">No Vacunado</label><br>
+          <!--Checkbox crea casillas de verificacion. Con checked carga ya seleccionado por defecto. Value envia el dato exacto al servidor.-->
+
+          <button type="submit">Enviar</button> <!--Crea un boton que envia la información-->
+        </form> <!--Form crea un formulario, action permite tener una entrada a un servidor y enviar el dato-->
+      </main> <!-- (Principal), indica donde esta nuestro contenido principal de la pagina web-->
+      <footer>
+        <p><small> Sin derechos de autor </small></p> <!--small hace las letras más pequeñas-->
+      </footer><!--Crea un pie de pagina, va fuera de main-->
+    </body>
+</html>
